@@ -1,0 +1,38 @@
+<?php
+    session_start();
+    session_destroy();
+    if(isset($_SESSION['message']))
+    {
+        unset($_SESSION['message']);
+    }
+    if(isset($_SESSION['fname']))
+    {
+        unset($_SESSION['fname']);
+    }
+    if(isset($_SESSION['lname']))
+    {
+        unset($_SESSION['lname']);
+    }
+    if(isset($_SESSION['email']))
+    {
+        unset($_SESSION['email']);
+    }
+    if(isset($_SESSION['password']))
+    {
+        unset($_SESSION['password']);
+    }
+    if(isset($_SESSION['gender']))
+    {
+        unset($_SESSION['gender']);
+    }
+    if(isset($_SESSION['num']))
+    {
+        unset($_SESSION['num']);
+    }
+    if(isset($_SESSION['dob']))
+    {
+        unset($_SESSION['dob']);
+    }
+    echo "Logged out";
+   header('location: http://localhost:8080/PhpProject1/login.php')
+?>
